@@ -4,60 +4,65 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='style.css'>
     <title>Sign-Up Form</title>
 </head>
 <body>
     <div class='left'>
-        <div>ODIN</div>
+        <div class='banner'>
+            <img src='image/odin-lined.png'>
+            <h1>ODIN</h1>
+        </div>
     </div>
     <div class='right'>
         <div>
-            <h1>
+            <h2>
                 This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
                 Sign up <em>now</em> to get started.
-            </h1>
-            <h1>
+            </h2>
+            <h2>
                 You <em>know</em> you want to.
-            </h1>
+            </h2>
         </div>
-        <div>
-            <h2>Let's do this!</h1>
-            <form action='' method='post'>
-                <div class='formContainer'>
+        <div class='formContainer'>
+            <h3>Let's do this!</h3>
+            <form action='#' method='post'>
+                <div class='form'>
                     <div>
-                        <div>
+                        <div class='formInfo'>
                             <label for='firstName'>FIRST NAME</label>
-                            <input type='text' name='firstName' id='firstName'>
+                            <input type='text' name='firstName' id='firstName' required>
                         </div>
-                        <div>
+                        <div class='formInfo'>
                             <label for='email'>EMAIL</label>
-                            <input type='text' name='email' id='email'>
+                            <input type='email' name='email' id='email' required>
                         </div>
-                        <div>
+                        <div class='formInfo'>
                             <label for='password'>PASSWORD</label>
-                            <input type='text' name='password' id='password'>
+                            <input type='text' name='password' id='password' class='error' required>
                         </div>
                     </div>
                     <div>
-                        <div>
+                        <div class='formInfo'>
                             <label for='lastName'>LAST NAME</label>
-                            <input type='text' name='lastName' id='lastName'>
+                            <input type='text' name='lastName' id='lastName' required>
                         </div>
-                        <div>
+                        <div class='formInfo'>
                             <label for='phoneNum'>PHONE NUMBER</label>
-                            <input type='text' name='phoneNum' id='phoneNum'>
+                            <input type='text' name='phoneNum' id='phoneNum' required>
                         </div>
-                        <div>
+                        <div class='formInfo'>
                             <label for='passwordConfirm'>CONFIRM PASSWORD</label>
-                            <input type='text' name='passwordConfirm' id='passwordConfirm'>
+                            <input type='text' name='passwordConfirm' id='passwordConfirm' class='error' required>
                         </div>
                     </div>
                 </div>
+                <button type='submit'>Create Account</button>
             </form>
         </div>
         <div>
-            <button type='submit'>Create Account</button>
-            <p>Already have an account? <a>Log in</a></p>
+            
+            <p>Already have an account? <a href=''>Log in</a></p>
         </div>
     </div>
 </body>

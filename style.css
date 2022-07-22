@@ -1,14 +1,129 @@
 :root {
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    --background: #181818;
+    --left-space: 40px;
+    --neon: #2de2e6;
+}
+
+@font-face {
+    font-family: NorseBold;
+    src: url(fonts/Norse-Bold.otf);
 }
 
 body {
+    margin: 0px;
+    padding: 0px;
     display: flex;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    color: lightgray;
+}
+
+.left {
+    background-image: url('image/retro.gif');
+    background-color: var(--background);
+    background-position: center;
+    background-size: cover;
+    width: 40vw;
 }
 
 .right {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    background-color: var(--background);
+    width: 60vw;
+}
+
+.right>div {
+    padding-left: var(--left-space);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.right>div>h2 {
+    width: 85%;
+}
+
+.formContainer {
+    background-color: #272727;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.form {
+    display: flex;
+    gap: 50px;
+}
+
+.formInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #8b8b8b;
+    border-radius: 3px;
+    background-color: #303030;
+    color: lightgray;
+}
+
+.banner {
+    font-family: NorseBold, Helvetica;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+    top: 10vh;
+}
+
+img {
+    width: 70px;
+    height: auto;
+}
+
+button {
+    background-color: #1f1e1e;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: var(--neon);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 3px solid var(--neon);
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: var(--neon);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+label {
+    font-size: 0.7rem;
+}
+
+input:focus {
+    border: 1px solid var(--neon);
+    outline: none;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background-color: var(--neon);
+    color: black;
+}
+
+button:active {
+    filter: brightness(150%);
 }
